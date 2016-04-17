@@ -1,0 +1,21 @@
+wimport Ember from 'ember';
+import DS from 'ember-data';
+
+export default DS.JSONSerializer.extend({
+    normalizeSingleResponse: function(store, primaryModelClass, payload, id, requestType)
+    {
+      return this._super(...arguments);
+    },
+
+    normalize: function (modelClass, resourceHash, prop)
+    {
+	return this._super(...arguments);
+    },
+
+    normalizeResponse: function(store, primaryModelClass, payload, id, requestType)
+    {
+	payload.fullName = payload.full_name;
+
+	return this._super(...arguments);
+    },
+});

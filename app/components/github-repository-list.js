@@ -1,0 +1,1 @@
+export { default } from 'github-sugar/components/github-repository-list';

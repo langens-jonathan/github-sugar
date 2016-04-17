@@ -47,37 +47,6 @@ export default Ember.Component.extend({
 	}
     },
 
-    findReadmeLocation: function(repoName) {
-	var result = Ember.ArrayProxy.create({content: []});
-	$.ajax({
-            url: 'https://api.github.com/repos/' + repoName + '/readme',
-            type: 'GET',
-            success: (data) => {
-		this.findReadme(data.download_url);
-            },
-            error: function() {
-            }
-	});
-	return result;
-    },
-
-
-    findReadme: function(url) {
-	var result = Ember.ArrayProxy.create({content: []});
-	Ember.Logger.log("trying to fetch readme from: " + url);
-	$.ajax({
-            url: url,
-            type: 'GET',
-            success: (data) => {
-		var repository = this.get('repository');
-		repository.set('readme', data);
-		this.set('repository', repository);
-            },
-            error: function() {
-            }
-	});
-	return result;
-    },
     
     repository:
     {
