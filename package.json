@@ -1,7 +1,7 @@
 {
   "name": "github-sugar",
-  "version": "0.0.0",
-  "description": "The default blueprint for ember-cli addons.",
+  "version": "0.0.3",
+  "description": "Github-Sugar provides several display components to display github related stuff like repositories, collections, readme files for repositories and what not.",
   "directories": {
     "doc": "doc",
     "test": "tests"
@@ -40,8 +40,9 @@
   "keywords": [
     "ember-addon"
   ],
-  "dependencies": {
-    "ember-cli-babel": "^5.1.5"
+    "dependencies": {
+	"ember-cli-htmlbars": "0.7.9",
+	"ember-cli-babel": "^5.1.5"
   },
   "ember-addon": {
     "configPath": "tests/dummy/config"

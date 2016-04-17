@@ -2,5 +2,9 @@
 'use strict';
 
 module.exports = {
-  name: 'github-sugar'
+    name: 'github-sugar',
+    
+    isDevelopingAddon: function() {
+	return true;
+    }
 };
