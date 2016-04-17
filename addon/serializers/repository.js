@@ -25,15 +25,16 @@ export default DS.JSONSerializer.extend({
 
     normalizeResponse: function(store, primaryModelClass, payload, id, requestType)
     {
-	// Ember.Logger.log("in normalizeResponse, store = " + store);
-	// Ember.Logger.log("in normalizeResponse, primaryModelClass = " + primaryModelClass);
-	// Ember.Logger.log("in normalizeResponse, payload = " + payload);
-	// Ember.Logger.log("in normalizeResponse, id = " + id);
-	// Ember.Logger.log("in normalizeResponse, requestType = " + requestType);
-	// Ember.Logger.log(payload);
+// 	Ember.Logger.log("in normalizeResponse, store = " + store);
+// 	Ember.Logger.log("in normalizeResponse, primaryModelClass = " + primaryModelClass);
+// 	Ember.Logger.log("in normalizeResponse, payload = " + payload);
+// 	Ember.Logger.log("in normalizeResponse, id = " + id);
+// 	Ember.Logger.log("in normalizeRespoQWERTnse, requestType = " + requestType);
+// 	Ember.Logger.log(payload);
 
 	payload.fullName = payload.full_name;
-	payload.htmlUrl = payload.url;
+	// payload.htmlUrl = payload.url;
+	// delete payload.url;
 	payload.commentsUrl = payload.comments_url;
 	payload.milestonesUrl = payload.milestones_url;
 	payload.cloneUrl = payload.clone_url;
@@ -47,7 +48,7 @@ export default DS.JSONSerializer.extend({
 
 	payload.ownerName = payload.owner.login;
 	payload.ownerAvatarUrl = payload.owner.avatar_url;
-	payload.ownerUrl = payload.owner.url;
+	// payload.ownerUrl = payload.owner.url;
 	payload.ownerFollowersUrl = payload.owner.followers_url;
 	payload.ownerRepositoriesUrl = payload.owner.repos_url;
 

@@ -1,6 +1,7 @@
 <div style="display:inline-block;border:1px solid black;">
-  {{#link-to repository.htmlUrl}}{{repository.name}}{{/link-to}}
-  <img src={{repository.avatar_url}}>
+  <h4>{{repository.name}}</h4>
+  <img src={{repository.avatarUrl}}>
+  <div style="float:left; display:inline-block; width: 45%; border-right: 1px solid black;">
   <table>
     {{#if showId}}
       <tr><td>id</td><td>{{repository.id}}</td></tr>
@@ -27,11 +28,13 @@
         <tr><td>{{repository.ownerName}}</td>
         <td></td></tr>
       {{/if}}
-      {{#if showOwnerUrl}}
-        <tr>{{#link-to repository.ownerUrl}}<td>owner homepage</td>{{/link-to}}</tr>
-      {{/if}}
     {{/if}}
   </table>
+  </div>
+  
+  <div style="float:left; display:inline-block; width: 45%; margin-left:15px;">
+    {{repository.readme}}
+  </div>
 
   {{yield}}
 </div>
