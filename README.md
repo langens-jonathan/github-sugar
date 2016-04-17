@@ -28,17 +28,14 @@ This component offers the following display options:
 <tr><td>showReadme</td><td>true</td></tr>
 </table>
 
-* `ember server`
-* Visit your app at http://localhost:4200.
+### github-repository-list
+You can use the repository-list component as follows:
+```
+{{github-repository-list id="langens-jonathan"}}
+```
 
-## Running Tests
-
-* `npm test` (Runs `ember try:testall` to test your addon against multiple Ember versions)
-* `ember test`
-* `ember test --server`
-
-## Building
-
-* `ember build`
-
-For more information on using ember-cli, visit [http://www.ember-cli.com/](http://www.ember-cli.com/).
+### github-readme-display
+The readme component is used like this:
+```
+{{github-readme-display id="langens-jonathan/github-sugar"}}
+```
