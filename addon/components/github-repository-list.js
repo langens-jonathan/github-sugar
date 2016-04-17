@@ -14,10 +14,31 @@ export default Ember.Component.extend({
 
     hasActiveRepository: false,
 
-    didInsertElement: function() {
+    didInsertElement:function()
+    {
+	this.tryOrganisation();
+    },
+
+    tryOrganisation: function() {
 	var result = Ember.ArrayProxy.create({content: []});
 	$.ajax({
             url: 'https://api.github.com/orgs/' + this.get('id') + '/repos',
+            type: 'GET',
+            success: (data) => {
+		this.set('repositories', data);
+            },
+            error: () => {
+		this.tryPerson();
+            }
+	});
+	return result;
+
+    },
+
+    tryPerson: function() {
+	var result = Ember.ArrayProxy.create({content: []});
+	$.ajax({
+            url: 'https://api.github.com/users/' + this.get('id') + '/repos',
             type: 'GET',
             success: (data) => {
 		this.set('repositories', data);
@@ -28,6 +49,8 @@ export default Ember.Component.extend({
 	return result;
 
     },
+
+
 
     actions:
     {
