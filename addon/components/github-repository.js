@@ -25,6 +25,8 @@ export default Ember.Component.extend({
 
     showOwnerAvatar: true,
 
+    showReadme: true,
+
     didInsertElement: function() {
 	if(this.get('id') !== void 0)
 	{
@@ -69,7 +71,6 @@ export default Ember.Component.extend({
             success: (data) => {
 		var repository = this.get('repository');
 		repository.set('readme', data);
-		Ember.Logger.log(data);
 		this.set('repository', repository);
             },
             error: function() {
