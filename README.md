@@ -6,7 +6,11 @@ Githug-sugar delivers components and models to interact with github.
 
 Add the following line to your package.json file:
 ```
-"github-sugar":"0.0.5"
+"github-sugar":"0.0.6"
+```
+or type
+```
+npm install --save github-sugar
 ```
 
 ## Usage
