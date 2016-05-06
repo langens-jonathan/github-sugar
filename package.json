@@ -42,7 +42,8 @@
   ],
     "dependencies": {
 	"ember-cli-htmlbars": "0.7.9",
-	"ember-cli-babel": "^5.1.5"
+	"ember-cli-babel": "^5.1.5",
+	"ember-remarkable":"1.6.2"
   },
   "ember-addon": {
     "configPath": "tests/dummy/config"
