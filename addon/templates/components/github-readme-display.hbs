@@ -1,1 +1,9 @@
-{{md-text text=readme}}
+{{#if allowTagSelection}}
+  <select onchange={{action "selectVersion" value="target.value"}}>
+  {{#each readmeArray as |r|}}
+    <option value={{r.tag}}>{{r.tag}}</option>
+  {{/each}}
+  </select>
+  <br>
+{{/if}}
+{{md-text text=readmeDisplay}}

@@ -20,7 +20,6 @@ export default DS.Model.extend({
     isPrivate: DS.attr('boolean'),
     isFork: DS.attr('boolean'),
     
-    
     // describing the owner
     ownerName: DS.attr('string'),
     ownerAvatarUrl: DS.attr('string'),

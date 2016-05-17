@@ -30,11 +30,10 @@ export default DS.JSONSerializer.extend({
 // 	Ember.Logger.log("in normalizeResponse, payload = " + payload);
 // 	Ember.Logger.log("in normalizeResponse, id = " + id);
 // 	Ember.Logger.log("in normalizeRespoQWERTnse, requestType = " + requestType);
-// 	Ember.Logger.log(payload);
+	// 	Ember.Logger.log(payload);
 
 	payload.fullName = payload.full_name;
-	// payload.htmlUrl = payload.url;
-	// delete payload.url;
+	
 	payload.commentsUrl = payload.comments_url;
 	payload.milestonesUrl = payload.milestones_url;
 	payload.cloneUrl = payload.clone_url;
