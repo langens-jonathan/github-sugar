@@ -23,6 +23,7 @@ export default Ember.Component.extend({
 
     didInsertElement: function()
     {
+	this.set('readmeArray', []);
 	this.findReadmeLocation(this.get('id'));
     },
 
